@@ -29,9 +29,15 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 54px;
+  font-size: 25px;
+  line-height: 37px;
+  margin-bottom: 25px;
   color: $title;
+  @include breakpoint('mobile') {
+    font-size: 36px;
+    line-height: 54px;
+    margin-bottom: 54px;
+  }
 }
 h4 {
   font-family: 'Poppins', sans-serif;
@@ -58,7 +64,7 @@ a {
   font-size: 14px;
   line-height: 28px;
   color: $text;
-  text-decoration: inherit;
+  text-decoration: none !important;
   &:hover,
   &:focus,
   &:active {

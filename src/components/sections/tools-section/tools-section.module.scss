@@ -1,0 +1,74 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.fluid-tools {
+    padding: 60px 0 45px 0!important;
+    position: relative;
+    @include breakpoint('mobile') {
+        padding: 110px 0 90px 0!important;
+    }
+}
+
+.bg {
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.tools-title {
+    @include breakpoint('mobile') {
+        text-align: center;
+    }
+}
+
+.tools-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+    @include breakpoint('mobile') {
+        width: 50%;
+    }
+    @include breakpoint('tablet') {
+        width: 25%;
+        margin-bottom: 0px;
+    }
+}
+
+.image-styles {
+    max-width: 50px;
+    margin-bottom: 15px;
+    @include breakpoint('mobile') {
+        margin-bottom: 30px;
+    }
+}
+
+.text-styles {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 0;
+    @include breakpoint('mobile') {
+        margin-top: 13px;
+        width: 85%;
+    }
+    @include breakpoint('desktop') {
+        margin-top: 13px;
+        width: 80%;
+    }
+}
+
+.tools-bg {
+    min-height: 53px;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 34px auto 0 auto;
+    @include breakpoint('mobile') {
+        max-width: 175px;
+    }
+}
