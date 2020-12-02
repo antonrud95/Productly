@@ -1,31 +1,41 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'gatsby'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './hero-section.module.scss'
+import SButton from '~/components/ui/general/button/button.component'
 import Img from 'gatsby-image'
+import { HeroType } from '~/types/hero.type'
+import FC from '~/types/fc'
 
-const HeroSection = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      unicornPic: file(relativePath: { eq: "images/global/unicorn-pic.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+interface Props {
+  hero: HeroType
+}
+
+const HeroSection: FC<Props> = ({ hero }) => {
   return (
-    <Container>
-      <div className={styles.heroBlock}>
-        <Img
-          fluid={data.unicornPic.childImageSharp.fluid}
-          className={styles.pic}
-        />
-        <h1 className={styles.heroTitle}>Let the magic work!</h1>
-      </div>
+    <Container className={styles.heroContainer}>
+      <Row>
+        <Col xs="12" md="5" className={styles.leftCol}>
+          <h1>{hero.title}</h1>
+          <p>{hero.description}</p>
+          <div className={styles.buttonWrapper}>
+            <SButton variant="primary" className={styles.heroBtn}>
+              Get started
+            </SButton>
+            <Link to="/" className={styles.heroWatch}>
+              <FontAwesomeIcon icon={faPlay} className={styles.play} />
+              Watch the video
+            </Link>
+          </div>
+        </Col>
+        <Col xs="12" md="7" className={styles.rightCol}>
+          <Img fluid={hero.image.fluid} className={styles.imageStyles} />
+        </Col>
+      </Row>
     </Container>
   )
 }

@@ -1,19 +1,56 @@
 @import 'src/styles/variables';
 @import 'src/styles/mixins';
 
-.hero-block {
-  display: flex;
-  height: 95vh;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.pic {
-  width: 300px;
-  @include breakpoint('tablet') {
-    width: 500px;
+.hero-container {
+  padding-top: 105px;
+  @include breakpoint('mobile') {
+    padding-top: 128px;
   }
 }
-.hero-title {
-  font-size: 24px;
+
+.image-styles {
+  max-width: 605px;
+  margin-left: auto;
+}
+
+.left-col {
+  @include breakpoint('mobile') {
+    padding-top: 60px;
+  }
+  @include breakpoint('tablet') {
+    padding-top: 80px;
+  }
+}
+
+.button-wrapper {
+  margin-bottom: 24px;
+  .hero-btn {
+    width: 100%;
+    margin-bottom: 24px;
+    @include breakpoint('tablet') {
+      margin-bottom: 0;
+    }
+  }
+  @include breakpoint('tablet') {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+    .hero-btn {
+      margin-right: 30px;
+      max-width: 175px;
+    }
+  }
+}
+
+.hero-watch {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: $orange;
+  .play {
+    margin-right: 9px;
+  }
 }

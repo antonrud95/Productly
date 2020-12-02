@@ -23,7 +23,7 @@ const SNavbar = () => {
       fixed="top"
       className={classnames(styles.navbar, styles.navbar__onLight)}
     >
-      <Container>
+      <Container className={styles.navContainer}>
         <Logo />
         <DarkMenuOpenIcon
           className={styles.openIcon}

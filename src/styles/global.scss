@@ -12,47 +12,53 @@ li {
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 44px !important;
-  line-height: 54px !important;
-  color: $title !important;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: $title;
+  margin-bottom: 20px;
+  @include breakpoint('mobile') {
+    font-size: 44px;
+    line-height: 54px;
+    margin-bottom: 30px;
+  }
 }
 h2 {
-  font-family: 'Poppins', sans-serif !important;
-  font-style: normal !important;
-  font-weight: 700 !important;
-  font-size: 36px !important;
-  line-height: 54px !important;
-  color: $title !important;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  color: $title;
 }
 h4 {
-  font-family: 'Poppins', sans-serif !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 22px !important;
-  line-height: 33px !important;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
   color: $title;
 }
 h5 {
-  font-family: 'Poppins', sans-serif !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
-  color: $text !important;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text;
 }
 
 a {
   display: block;
-  font-family: 'Poppins', sans-serif !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 14px !important;
-  line-height: 28px !important;
-  color: $text !important;
-  text-decoration: inherit !important;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: $text;
+  text-decoration: inherit;
   &:hover,
   &:focus,
   &:active {
@@ -61,11 +67,15 @@ a {
 }
 
 p {
-  font-family: 'Poppins', sans-serif !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 18px !important;
-  line-height: 28px !important;
-  color: $text !important;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text;
+  margin-bottom: 30px;
+  @include breakpoint('mobile') {
+    margin-bottom: 45px;
+  }
 }
 
