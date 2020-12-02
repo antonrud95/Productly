@@ -7,6 +7,7 @@ const {
   GATSBY_TITLE,
   GATSBY_DESCRIPTION,
   GOOGLE_ANALYTICS_ID,
+  READONLY_API_TOKEN,
 } = process.env
 const isProd = GATSBY_ACTIVE_ENV === 'production'
 
@@ -41,6 +42,14 @@ module.exports = {
           `source sans pro\:400,500,600,700`, // you can also specify font weights and styles
         ],
         display: 'swap',
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: READONLY_API_TOKEN,
+        preview: false,
+        disableLiveReload: false,
       },
     },
     {

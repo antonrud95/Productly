@@ -23,22 +23,28 @@ const MobileMenu: FC<Props> = ({ isShown, toggle }) => {
   }
   return (
     <div className={isShown ? shownClass : styles.root}>
-      <Container style={{ padding: 0 }}>
+      <Container>
         <Logo />
-        <CloseIcon onClick={closeClickHandler} />
+        <CloseIcon onClick={closeClickHandler} className={styles.close} />
       </Container>
       <Container className={styles.linkBlock}>
         <Link to="/" className={styles.link}>
-          Nav Item #1
+          Product
         </Link>
         <Link to="/" className={styles.link}>
-          Nav Item #2
+          Customers
         </Link>
         <Link to="/" className={styles.link}>
-          Nav Item #3
+          Pricng
         </Link>
-        <Button variant={'primary'} additionalClasses={[styles.buttonRoot]}>
-          Button
+        <Link to="/" className={styles.link}>
+          Resources
+        </Link>
+        <Button variant={'secondary'} className={styles.firstBtn}>
+          Sign In
+        </Button>
+        <Button variant={'primary'} className={styles.secondBtn}>
+          Sign Up
         </Button>
       </Container>
     </div>

@@ -24,6 +24,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.17",
     "gatsby-plugin-sitemap": "^2.4.10",
+    "gatsby-source-datocms": "^2.5.7",
     "gatsby-source-filesystem": "^2.3.18",
     "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-sharp": "^2.5.10",

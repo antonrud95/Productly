@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   display: none;
-  padding: 1.5rem 0 3rem;
+  padding: 2.2rem 0;
   background-color: white;
   overflow: scroll;
   &__shown {
@@ -20,32 +20,20 @@
 }
 
 .link {
-  font-family: 'Arial', sans-serif;
-  color: $primary;
-  font-size: 24px;
   margin: 0 1.5rem;
   padding-bottom: $p-xxl;
-  border-bottom: 2px solid transparent;
   transition: all 0.3s ease-in-out;
-  &:hover {
-    color: $primary;
-  }
 }
-.button-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+
+.first-btn {
+  margin-bottom: $p-m;
+  width: 100%;
 }
-.button-block {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+
+.second-btn {
+  width: 100%;
 }
-.button-root {
-  background-color: #464073 !important;
-}
-.semicircles {
-  margin-top: 90px;
+
+.close {
+  max-height: 32px !important;
 }

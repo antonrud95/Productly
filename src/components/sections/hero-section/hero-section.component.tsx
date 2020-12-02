@@ -24,7 +24,7 @@ const HeroSection = () => {
           fluid={data.unicornPic.childImageSharp.fluid}
           className={styles.pic}
         />
-        <p className={styles.heroTitle}>Let the magic work!</p>
+        <h1 className={styles.heroTitle}>Let the magic work!</h1>
       </div>
     </Container>
   )

@@ -1,19 +1,20 @@
 @import 'src/styles/variables';
 .button {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: white;
-  background-color: $primary;
+  color: $signin;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
+  height: 46px !important;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   transition: all 0.1s ease-in-out;
-  padding-left: $p-xl;
-  padding-right: $p-xl;
+  padding-left: $p-l;
+  padding-right: $p-l;
   white-space: nowrap;
   cursor: pointer;
   &:hover {
@@ -27,28 +28,29 @@
   }
 }
 .primary {
-  background-color: #353057;
+  background-color: $orange;
+  color: $white !important;
   &:hover,
   &:focus {
-    background-color: #353057;
+    background-color: $orange;
   }
   &:active {
-    background-color: #353057 !important;
+    background-color: $orange !important;
   }
 }
 .secondary {
-  color: $primary;
+  color: $signin;
   background-color: transparent;
-  border: 2px solid $primary;
+  border: 1px solid #BCD0E5;
   &:hover,
   &:focus {
-    color: $primary;
+    color: $signin;
     background-color: transparent;
-    border: 2px solid $primary;
+    border: 1px solid #BCD0E5;
   }
   &:active {
-    color: $primary !important;
+    color: $signin !important;
     background-color: transparent !important;
-    border: 2px solid $primary !important;
+    border: 1px solid #BCD0E5 !important;
   }
 }
