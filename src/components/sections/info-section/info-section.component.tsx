@@ -50,35 +50,39 @@ const InfoSection: FC<Props> = ({
   isText,
 }) => {
   return (
-    <Container>
+    <Container className={styles.infoContainer}>
       <Row
         className={
           reverse ? [styles.row, styles.row__reverse].join(' ') : styles.row
         }
       >
-        <Col xs="12" md="6">
-          <h4>{uppertitle}</h4>
-          <h2>{title}</h2>
-          <p>{description}</p>
+        <Col
+          xs="12"
+          md="6"
+          className={reverse ? styles.leftColReverse : styles.leftCol}
+        >
+          <h4 className={styles.upperTitle}>{uppertitle}</h4>
+          <h2 style={{ marginBottom: 22 }}>{title}</h2>
+          <p className={styles.descriptionStyles}>{description}</p>
           {isText ? (
             <>
-              <h5>{upperFirstItemTitle}</h5>
-              <p>{upperFirstItemText}</p>
-              <h5>{upperSecondItemTitle}</h5>
-              <p>{upperSecondItemText}</p>
-              <h5>{upperThirdItemTitle}</h5>
-              <p>{upperThirdItemText}</p>
+              <h5 className={styles.lowerTitle}>{upperFirstItemTitle}</h5>
+              <p className={styles.lowerText}>{upperFirstItemText}</p>
+              <h5 className={styles.lowerTitle}>{upperSecondItemTitle}</h5>
+              <p className={styles.lowerText}>{upperSecondItemText}</p>
+              <h5 className={styles.lowerTitle}>{upperThirdItemTitle}</h5>
+              <p className={styles.lowerText}>{upperThirdItemText}</p>
             </>
           ) : (
             <>
-              <InfoCheck image={firstItemImage} text={firstItemText} />
-              <InfoCheck image={secondItemImage} text={secondItemText} />
-              <InfoCheck image={thirdItemImage} text={thirdItemText} />
+              <InfoCheck image={firstItemImage.fluid} text={firstItemText} />
+              <InfoCheck image={secondItemImage.fluid} text={secondItemText} />
+              <InfoCheck image={thirdItemImage.fluid} text={thirdItemText} />
             </>
           )}
         </Col>
         <Col xs="12" md="6">
-          <Img fluid={image.fluid} />
+          <Img fluid={image.fluid} className={styles.infoImg} />
         </Col>
       </Row>
     </Container>

@@ -1,0 +1,23 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.infocheck-wrapper {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.infocheck-img {
+    min-width: 35px !important;
+    min-height: 35px !important;
+    max-width: 35px !important;
+    max-height: 35px !important;
+    margin-right: 30px;
+    margin-top: 4px;
+}
+
+.infocheck-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 0;
+}

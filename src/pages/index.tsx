@@ -25,6 +25,32 @@ const IndexPage = ({ data }) => (
       upperThirdItemTitle={data.datoCmsDesigner.titlethird}
       upperThirdItemText={data.datoCmsDesigner.textthird}
     />
+    <InfoSection
+      reverse
+      uppertitle={data.datoCmsManager.uppertitle}
+      title={data.datoCmsManager.title}
+      description={data.datoCmsManager.description}
+      image={data.datoCmsManager.image}
+      firstItemImage={data.datoCmsManager.checkfirst}
+      firstItemText={data.datoCmsManager.descriptionfirst}
+      secondItemImage={data.datoCmsManager.checkfirst}
+      secondItemText={data.datoCmsManager.descriptionsecond}
+      thirdItemImage={data.datoCmsManager.checkfirst}
+      thirdItemText={data.datoCmsManager.descriptionthird}
+    />
+    <InfoSection
+      isText
+      uppertitle={data.datoCmsMarketer.uppertitle}
+      title={data.datoCmsMarketer.title}
+      description={data.datoCmsMarketer.description}
+      image={data.datoCmsMarketer.image}
+      upperFirstItemTitle={data.datoCmsMarketer.titlefirst}
+      upperFirstItemText={data.datoCmsMarketer.textfirst}
+      upperSecondItemTitle={data.datoCmsMarketer.titlesecond}
+      upperSecondItemText={data.datoCmsMarketer.textsecond}
+      upperThirdItemTitle={data.datoCmsMarketer.titlethird}
+      upperThirdItemText={data.datoCmsMarketer.textthird}
+    />
   </Layout>
 )
 
@@ -67,6 +93,40 @@ export const query = graphql`
       textsecond
       titlethird
       textthird
+    }
+    datoCmsMarketer {
+      uppertitle
+      title
+      description
+      image {
+        fluid {
+          ...GatsbyDatoCmsFluid
+        }
+      }
+      titlefirst
+      textfirst
+      titlesecond
+      textsecond
+      titlethird
+      textthird
+    }
+    datoCmsManager {
+      uppertitle
+      title
+      description
+      image {
+        fluid {
+          ...GatsbyDatoCmsFluid
+        }
+      }
+      checkfirst {
+        fluid {
+          ...GatsbyDatoCmsFluid
+        }
+      }
+      descriptionfirst
+      descriptionsecond
+      descriptionthird
     }
   }
 `

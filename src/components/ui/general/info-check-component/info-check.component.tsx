@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 import FC from '~/types/fc'
 
 import styles from './info-check.module.scss'
 
 interface Props {
-  image: any
+  image: FluidObject
   text: string
 }
 

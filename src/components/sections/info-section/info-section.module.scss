@@ -1,0 +1,69 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.row {
+    &__reverse {
+      flex-direction: row-reverse;
+    }
+}
+
+.info-container {
+    margin-top: 50px;
+    @include breakpoint('mobile') {
+        margin-top: 110px;
+    }
+}
+
+.upper-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text;
+    margin-bottom: 3px;
+}
+
+.lower-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    color: $title;
+    margin-bottom: 12px;
+}
+
+.lower-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+.left-col {
+    @include breakpoint('tablet') {
+        padding-top: 39px;
+        padding-right: 45px;
+    }
+    @include breakpoint('desktop') {
+        padding-right: 90px;
+    }
+}
+.left-col-reverse {
+    @include breakpoint('tablet') {
+        padding-top: 39px;
+        padding-left: 45px;
+    }
+    @include breakpoint('desktop') {
+        padding-left: 90px;
+    }
+}
+
+.info-img {
+    max-width: 530px;
+    margin-left: auto;
+}
+
+.description-styles {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+}
