@@ -6,6 +6,7 @@ import SEO from '~/components/seo.component'
 import HeroSection from '~/components/sections/hero-section/hero-section.component'
 import ToolsSection from '~/components/sections/tools-section/tools-section.component'
 import InfoSection from '~/components/sections/info-section/info-section.component'
+import ContactsSection from '~/components/sections/contacts-section/contacts-section.component'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -51,6 +52,7 @@ const IndexPage = ({ data }) => (
       upperThirdItemTitle={data.datoCmsMarketer.titlethird}
       upperThirdItemText={data.datoCmsMarketer.textthird}
     />
+    <ContactsSection contacts={data.allDatoCmsContact.nodes} />
   </Layout>
 )
 
@@ -127,6 +129,17 @@ export const query = graphql`
       descriptionfirst
       descriptionsecond
       descriptionthird
+    }
+    allDatoCmsContact {
+      nodes {
+        id
+        avatar {
+          fluid {
+            ...GatsbyDatoCmsFluid
+          }
+        }
+        text
+      }
     }
   }
 `
