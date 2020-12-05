@@ -36,6 +36,7 @@ const ContactsSection: FC<Props> = ({ contacts }) => {
               key={contact.id}
               text={contact.text}
               avatar={contact.avatar.fluid}
+              outerwrapper={`outer-wrapper outer-wrapper-${index}`}
             />
           )
         })}

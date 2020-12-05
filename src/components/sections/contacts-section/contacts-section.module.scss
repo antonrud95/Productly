@@ -60,3 +60,9 @@
         max-width: 216px;
     }
 }
+
+.outer-wrapper {
+    @include breakpoint('mobile') {
+        display: inline-block !important;
+    }
+}

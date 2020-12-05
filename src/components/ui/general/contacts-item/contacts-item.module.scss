@@ -8,14 +8,6 @@
     margin-bottom: 100px;
     padding: 15px 20px;
     border-radius: 26px;
-    @include breakpoint('desktop') {
-        &:nth-child(1) {
-            position: absolute !important;
-            top: 0;
-            left: 0;
-        }
-        
-    }
     &:before {
         content:"";
         position: absolute;
@@ -39,9 +31,7 @@
         box-shadow: 0px 2px 8px rgba(86, 117, 146, 0.1);
         z-index: -1 !important;
     }
-    @include breakpoint('mobile') {
-        display: inline-block;
-    }
+    
 }
 
 .item-text {
@@ -64,3 +54,4 @@
         top: 75% !important;
     }
 }
+

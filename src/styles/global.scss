@@ -85,3 +85,15 @@ p {
   }
 }
 
+
+.outer-wrapper {
+  @include breakpoint('mobile') {
+      display: inline-block !important;
+  }
+}
+
+.outer-wrapper-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
