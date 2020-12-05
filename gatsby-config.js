@@ -35,16 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Poppins`,
-          `source sans pro\:400,500,600,700`, // you can also specify font weights and styles
-        ],
-        display: 'swap',
-      },
-    },
-    {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: READONLY_API_TOKEN,
