@@ -4,6 +4,7 @@
 .marketing-container {
     padding-bottom: 60px;
     border-bottom: 2px solid rgba(188, 208, 229, 0.496913);
+    overflow: hidden;
     @include breakpoint('mobile') {
         padding-bottom: 120px;
     }
@@ -30,8 +31,4 @@
     @include breakpoint('mobile') {
         margin-bottom: 55px;
     }
-}
-
-.carousel-wrapper {
-    overflow: hidden;
 }

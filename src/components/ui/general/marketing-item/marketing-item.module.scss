@@ -5,6 +5,11 @@
     @include breakpoint('mobile') {
         padding: 0 15px;
     }
+    &:hover {
+        .header-intro {
+            color: #FF9900;
+        }
+    }
 }
 
 .item-header {
@@ -24,6 +29,7 @@
     font-size: 16px;
     line-height: 16px;
     margin-bottom: 0;
+    margin-right: 6px;
 }
 .header-name {
     font-size: 16px;
