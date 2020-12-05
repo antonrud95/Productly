@@ -30,7 +30,7 @@ const ContactsSection: FC<Props> = ({ contacts }) => {
             Contact our expert
           </SButton>
         </div>
-        <div>
+        <div className={styles.speechWrapper}>
           {contacts.map((contact: ContactsType, index) => {
             return (
               <ContactsItem
