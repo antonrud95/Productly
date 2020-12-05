@@ -30,16 +30,18 @@ const ContactsSection: FC<Props> = ({ contacts }) => {
             Contact our expert
           </SButton>
         </div>
-        {contacts.map((contact: ContactsType, index) => {
-          return (
-            <ContactsItem
-              key={contact.id}
-              text={contact.text}
-              avatar={contact.avatar.fluid}
-              outerwrapper={`outer-wrapper outer-wrapper-${index}`}
-            />
-          )
-        })}
+        <div>
+          {contacts.map((contact: ContactsType, index) => {
+            return (
+              <ContactsItem
+                key={contact.id}
+                text={contact.text}
+                avatar={contact.avatar.fluid}
+                outerwrapper={styles.outerWrapper}
+              />
+            )
+          })}
+        </div>
       </Container>
     </Container>
   )
