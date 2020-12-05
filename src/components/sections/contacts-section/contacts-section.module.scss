@@ -1,0 +1,49 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.contacts-fluid {
+    padding: 80px 0 !important;
+    position: relative;
+    @include breakpoint('mobile') {
+        padding: 160px 0!important;
+    }
+}
+
+.bg {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.contacts-title {
+    margin-bottom: 22px;
+    text-align: center;
+}
+.contacts-text {
+    margin-bottom: 22px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #567592;
+    @include breakpoint('mobile') {
+        margin-bottom: 45px;
+        width: 80%;
+        margin: 0 auto 45px auto;
+    }
+    @include breakpoint('tablet') {
+        width: 55%;
+    }
+}
+
+.contacts-btn {
+    margin-bottom: 20px;
+    min-height: 53px;
+    width: 100%;
+    @include breakpoint('mobile') {
+        margin: 0 auto;
+        max-width: 216px;
+    }
+}
