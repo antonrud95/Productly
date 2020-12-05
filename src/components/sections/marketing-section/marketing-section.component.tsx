@@ -3,9 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { MarketingType } from '~/types/marketing.type'
 
 import MarketingItem from '~/components/ui/general/marketing-item/marketing-item.component'
+import Carousel from '~/components/ui/general/carousel/carousel.component'
 import FC from '~/types/fc'
 
-// import styles from './marketing-section.module.scss'
+import styles from './marketing-section.module.scss'
 
 interface Props {
   sliders: MarketingType[]
@@ -14,12 +15,15 @@ interface Props {
 const MarketingSection: FC<Props> = ({ sliders }) => {
   return (
     <Container>
-      <h2>Marketing Strategies</h2>
-      <p>
-        Join 40,000+ other marketers and get proven strategies on email
-        marketing
-      </p>
-      <div>
+      <div className={styles.marketingHeader}>
+        <h2 className={styles.marketingTitle}>Marketing Strategies</h2>
+        <p className={styles.marketingText}>
+          Join 40,000+ other marketers and get proven strategies on email
+          marketing
+        </p>
+      </div>
+
+      <Carousel>
         {sliders.map((slider: MarketingType, index) => {
           return (
             <MarketingItem
@@ -31,7 +35,7 @@ const MarketingSection: FC<Props> = ({ sliders }) => {
             />
           )
         })}
-      </div>
+      </Carousel>
     </Container>
   )
 }

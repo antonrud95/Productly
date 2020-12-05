@@ -2,7 +2,7 @@ import React from 'react'
 import Img, { FluidObject } from 'gatsby-image'
 import FC from '~/types/fc'
 
-// import styles from './marketing-item.module.scss'
+import styles from './marketing-item.module.scss'
 
 interface Props {
   image: FluidObject
@@ -13,16 +13,16 @@ interface Props {
 
 const MarketingItem: FC<Props> = ({ image, date, author, intro }) => {
   return (
-    <div>
+    <div className={styles.sliderItemWrapper}>
       <Img fluid={image} />
-      <div>
-        <div>
-          <p>By</p>
-          <p>{author}</p>
+      <div className={styles.itemHeader}>
+        <div className={styles.itemAuthor}>
+          <p className={styles.headerText}>By</p>
+          <p className={styles.headerName}>{author}</p>
         </div>
-        <p>{date}</p>
+        <p className={styles.headerText}>{date}</p>
       </div>
-      <p>{intro}</p>
+      <p className={styles.headerIntro}>{intro}</p>
     </div>
   )
 }
