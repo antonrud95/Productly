@@ -1,8 +1,7 @@
 import React from 'react'
 import FC from '~/types/fc'
 import Img, { FluidObject } from 'gatsby-image'
-
-import styles from './contacts-item.module.scss'
+import Typewriter from 'typewriter-effect'
 
 interface Props {
   text: string
@@ -19,10 +18,13 @@ const ContactsItem: FC<Props> = ({
   innerWrapper,
   image,
 }) => {
+  const typing = (typewriter) => {
+    typewriter.typeString(text).start()
+  }
   return (
     <div className={outerwrapper}>
       <div className={innerWrapper}>
-        <p className={styles.itemText}>{text}</p>
+        <Typewriter onInit={typing} />
         <Img fluid={avatar} className={image} />
       </div>
     </div>
