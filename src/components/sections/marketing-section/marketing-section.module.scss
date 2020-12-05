@@ -1,6 +1,14 @@
 @import '~/styles/variables';
 @import '~/styles/mixins';
 
+.marketing-container {
+    padding-bottom: 60px;
+    border-bottom: 2px solid rgba(188, 208, 229, 0.496913);
+    @include breakpoint('mobile') {
+        padding-bottom: 120px;
+    }
+}
+
 .marketing-header {
     @include breakpoint('mobile') {
         padding-left: 15px;
@@ -22,4 +30,8 @@
     @include breakpoint('mobile') {
         margin-bottom: 55px;
     }
+}
+
+.carousel-wrapper {
+    overflow: hidden;
 }

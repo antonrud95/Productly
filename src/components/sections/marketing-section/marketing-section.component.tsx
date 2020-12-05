@@ -14,7 +14,7 @@ interface Props {
 
 const MarketingSection: FC<Props> = ({ sliders }) => {
   return (
-    <Container>
+    <Container className={styles.marketingContainer}>
       <div className={styles.marketingHeader}>
         <h2 className={styles.marketingTitle}>Marketing Strategies</h2>
         <p className={styles.marketingText}>
@@ -22,20 +22,21 @@ const MarketingSection: FC<Props> = ({ sliders }) => {
           marketing
         </p>
       </div>
-
-      <Carousel>
-        {sliders.map((slider: MarketingType, index) => {
-          return (
-            <MarketingItem
-              key={slider.id}
-              image={slider.image.fluid}
-              date={slider.date}
-              author={slider.author}
-              intro={slider.description}
-            />
-          )
-        })}
-      </Carousel>
+      <div className={styles.carouselWrapper}>
+        <Carousel>
+          {sliders.map((slider: MarketingType, index) => {
+            return (
+              <MarketingItem
+                key={slider.id}
+                image={slider.image.fluid}
+                date={slider.date}
+                author={slider.author}
+                intro={slider.description}
+              />
+            )
+          })}
+        </Carousel>
+      </div>
     </Container>
   )
 }

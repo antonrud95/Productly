@@ -1,0 +1,66 @@
+@import '~/styles/variables.scss';
+@import '~/styles/mixins.scss';
+
+.footer-container {
+    padding: 50px 0;
+    @include breakpoint('mobile') {
+        padding: 100px 0;
+    }
+    .link-wrapper {
+        margin-top: 33px;
+        margin-bottom: 20px;
+        @include breakpoint('mobile') {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+        @include breakpoint('tablet') {
+            justify-content: flex-end;
+        }
+        .link-item {
+            font-size: 16px;
+            line-height: 35px;
+            transition: .3s ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+            }  
+        }
+        .link-wrapper-item {
+            @include breakpoint('tablet') {
+                padding-left: 128px;
+            }
+        }
+    }
+    .btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include breakpoint('mobile') {
+            margin-top: 59px;
+        }
+        .input-wrapper {
+            width: 100%;
+            position: relative;
+        }
+        .footer-btn {
+            min-height: 39px;
+            width: 100%;
+            @include breakpoint('mobile') {
+                max-width: 131px;
+                margin-left: 45px;
+            }
+        }
+        .footer-input {
+            width: 100%;
+            min-height: 48px;
+            border-radius: 4px;
+            border: 1px solid #BCD0E5;
+            margin-bottom: 21px;
+            display: flex;
+            margin-left: auto;
+            @include breakpoint('mobile') {
+                max-width: 325px;
+            }
+        }
+    }
+}
