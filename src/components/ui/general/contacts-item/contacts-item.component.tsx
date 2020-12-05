@@ -8,14 +8,22 @@ interface Props {
   text: string
   avatar: FluidObject
   outerwrapper: string
+  innerWrapper: string
+  image: string
 }
 
-const ContactsItem: FC<Props> = ({ text, avatar, outerwrapper }) => {
+const ContactsItem: FC<Props> = ({
+  text,
+  avatar,
+  outerwrapper,
+  innerWrapper,
+  image,
+}) => {
   return (
     <div className={outerwrapper}>
-      <div className={styles.itemWrapper}>
+      <div className={innerWrapper}>
         <p className={styles.itemText}>{text}</p>
-        <Img fluid={avatar} className={styles.itemImage} />
+        <Img fluid={avatar} className={image} />
       </div>
     </div>
   )

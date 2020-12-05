@@ -38,6 +38,8 @@ const ContactsSection: FC<Props> = ({ contacts }) => {
                 text={contact.text}
                 avatar={contact.avatar.fluid}
                 outerwrapper={styles.outerWrapper}
+                innerWrapper={styles.itemWrapper}
+                image={styles.itemImage}
               />
             )
           })}
