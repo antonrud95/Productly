@@ -18,7 +18,7 @@ const ContactsSection: FC<Props> = ({ contacts }) => {
   return (
     <Container fluid className={styles.contactsFluid}>
       <Img fluid={contactsBg.childImageSharp.fluid} className={styles.bg} />
-      <Container>
+      <Container className={styles.contactsContainer}>
         <div className={styles.contactsInfo}>
           <h2 className={styles.contactsTitle}>Need a super hero?</h2>
           <p className={styles.contactsText}>

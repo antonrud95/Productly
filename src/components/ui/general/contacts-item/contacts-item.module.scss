@@ -2,12 +2,20 @@
 @import '~/styles/mixins.scss';
 
 .item-wrapper {
-    position: relative !important;
+    position: relative;
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(86, 117, 146, 0.1);
     margin-bottom: 100px;
     padding: 15px 20px;
     border-radius: 26px;
+    @include breakpoint('desktop') {
+        &:nth-child(1) {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+        }
+        
+    }
     &:before {
         content:"";
         position: absolute;

@@ -2,19 +2,32 @@
 @import '~/styles/mixins.scss';
 
 .contacts-fluid {
-    padding: 80px 0 !important;
+    padding: 160px 0 !important;
     position: relative;
     @include breakpoint('mobile') {
-        padding: 160px 0!important;
+        padding: 320px 0!important;
+    }
+}
+
+.contacts-container {
+    position: relative;
+}
+
+.contacts-info {
+    @include breakpoint('desktop') {
+        padding-top: 150px;
     }
 }
 
 .bg {
     position: absolute !important;
-    top: 0;
+    top: 80px;
     left: 0;
     right: 0;
     z-index: -1;
+    @include breakpoint('mobile') {
+        top: 160px;
+    }
 }
 
 .contacts-title {
