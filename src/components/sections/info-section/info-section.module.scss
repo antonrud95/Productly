@@ -9,6 +9,7 @@
 
 .info-container {
     margin-top: 50px;
+    overflow: hidden !important;
     @include breakpoint('mobile') {
         margin-top: 110px;
     }

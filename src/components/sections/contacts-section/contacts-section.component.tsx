@@ -31,7 +31,7 @@ const ContactsSection: FC<Props> = ({ contacts }) => {
           </SButton>
         </div>
         <div className={styles.speechWrapper}>
-          {contacts.map((contact: ContactsType, index) => {
+          {contacts.reverse().map((contact: ContactsType, index) => {
             return (
               <ContactsItem
                 key={contact.id}
