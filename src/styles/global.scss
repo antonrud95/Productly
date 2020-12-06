@@ -12,9 +12,7 @@ li {
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'Poppins Bold';
   font-size: 30px;
   line-height: 40px;
   color: $title;
@@ -26,25 +24,25 @@ h1 {
   }
 }
 h2 {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 54px;
+  font-family: 'Poppins Bold';
+  font-size: 25px;
+  line-height: 37px;
+  margin-bottom: 25px;
   color: $title;
+  @include breakpoint('mobile') {
+    font-size: 36px;
+    line-height: 54px;
+    margin-bottom: 54px;
+  }
 }
 h4 {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 600;
+  font-family: 'Poppins Semi Bold';
   font-size: 22px;
   line-height: 33px;
   color: $title;
 }
 h5 {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  font-family: 'Poppins Medium';
   font-size: 16px;
   line-height: 24px;
   color: $text;
@@ -52,13 +50,11 @@ h5 {
 
 a {
   display: block;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Poppins Regular';
   font-size: 14px;
   line-height: 28px;
   color: $text;
-  text-decoration: inherit;
+  text-decoration: none !important;
   &:hover,
   &:focus,
   &:active {
@@ -67,9 +63,7 @@ a {
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Poppins Regular';
   font-size: 18px;
   line-height: 28px;
   color: $text;
@@ -77,5 +71,22 @@ p {
   @include breakpoint('mobile') {
     margin-bottom: 45px;
   }
+}
+
+.slick-dots li button:before {
+  font-size: 16px !important;
+  color: #EFEFEF !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color:#FF9900 !important;
+}
+
+.Typewriter__wrapper {
+  font-family: 'Poppins Medium';
+  font-size: 16px;
+  line-height: 24px;
+  color: $title;
 }
 

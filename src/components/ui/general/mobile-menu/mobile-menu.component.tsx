@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { Link } from 'gatsby'
 
@@ -11,6 +11,12 @@ import CloseIcon from '~/assets/icons/menu-close-icon.svg'
 import styles from './mobile-menu.module.scss'
 import Button from '~/components/ui/general/button/button.component'
 
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock'
+
 interface Props {
   isShown: boolean
   toggle: (value: boolean) => void
@@ -18,11 +24,20 @@ interface Props {
 
 const MobileMenu: FC<Props> = ({ isShown, toggle }) => {
   const shownClass = [styles.root, styles.root__shown].join(' ')
-  const closeClickHandler = () => {
+
+  const menuRef = useRef(null)
+  useEffect(() => {
+    isShown ? disableBodyScroll(menuRef.current) : clearAllBodyScrollLocks()
+  }, [isShown])
+
+  const closeClickHandler = (e) => {
+    e.preventDefault()
+    enableBodyScroll(menuRef.current)
+    clearAllBodyScrollLocks()
     toggle(false)
   }
   return (
-    <div className={isShown ? shownClass : styles.root}>
+    <div className={isShown ? shownClass : styles.root} ref={menuRef}>
       <Container>
         <Logo />
         <CloseIcon onClick={closeClickHandler} className={styles.close} />
